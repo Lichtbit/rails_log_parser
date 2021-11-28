@@ -29,7 +29,15 @@ RailsLogParser::Parser.log_path = Rails.root.join('log/production.log')
 Call the rake tasks in cronjobs:
 
 ```
+LOG_PATH=/srv/rails/log/production.log
 0,20,40 * * * * rake rails_log_parser:parse[22]' # summary of the last 22 minutes
+```
+
+Or use it in your code:
+
+```ruby
+parser = RailsLogParser::Parser.from_file(log_path)
+puts parser.actions.select(&:fatal?).map(&:headline)
 ```
 
 ## Contributing
