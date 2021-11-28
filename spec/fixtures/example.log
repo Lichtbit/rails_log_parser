@@ -1,0 +1,70 @@
+I, [2021-11-28T00:00:35.744942 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Started GET "/blub....
+I, [2021-11-28T00:00:35.745665 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Processing by Public::blubbersController#index as HTML
+I, [2021-11-28T00:00:35.750066 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendering publi...
+I, [2021-11-28T00:00:35.754069 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered pub...
+I, [2021-11-28T00:00:35.758702 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lb/...
+I, [2021-11-28T00:00:35.759131 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lay...
+I, [2021-11-28T00:00:35.759339 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 2.6ms)
+I, [2021-11-26T12:08:56.245864 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Started DELETE "/c/gg....
+I, [2021-11-26T12:08:56.246779 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Processing by Public::NlluuController#destroy as HTML
+I, [2021-11-26T12:08:56.246887 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Parameters: {....
+I, [2021-11-26T12:08:56.249563 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+F, [2021-11-26T12:08:56.250203 #10151] FATAL -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   
+F, [2021-11-26T12:08:56.250291 #10151] FATAL -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] ActiveRecord::RecordNotFound (Couldn't find Foobars::CenterFoo):
+F, [2021-11-26T12:08:56.250347 #10151] FATAL -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   
+F, [2021-11-26T12:08:56.250403 #10151] FATAL -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] app/con....ntroller.rb:85:in `set_prospect'
+I, [2021-11-26T12:08:56.250876 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Processing by ErrorsController#not_found as HTML
+I, [2021-11-26T12:08:56.250989 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Parameters: {"authenticity_token"=>"...
+I, [2021-11-26T12:08:56.251602 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Rendering error...
+I, [2021-11-26T12:08:56.252216 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Rendered err...
+I, [2021-11-26T12:08:56.253209 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Rendered lay...
+I, [2021-11-26T12:08:56.253330 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Completed 404 Not Found in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+I, [2021-11-26T12:17:01.995525 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482] Started OPTIONS "/c/um....
+F, [2021-11-26T12:17:01.996347 #10151] FATAL -- : [5a671a79-df26-48df-8093-983388f8e482]   
+F, [2021-11-26T12:17:01.996434 #10151] FATAL -- : [5a671a79-df26-48df-8093-983388f8e482] ActionController::RoutingError (No route matches [OPTIONS] "/c....
+F, [2021-11-26T12:17:01.996484 #10151] FATAL -- : [5a671a79-df26-48df-8093-983388f8e482]   
+F, [2021-11-26T12:17:01.996554 #10151] FATAL -- : [5a671a79-df26-48df-8093-983388f8e482] actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+[5a671a79-df26-48df-8093-983388f8e482] railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+[5a671a79-df26-48df-8093-983388f8e482] activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+[5a671a79-df26-48df-8093-983388f8e482] activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+[5a671a79-df26-48df-8093-983388f8e482] activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+[5a671a79-df26-48df-8093-983388f8e482] railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] railties (5.2.5) lib/rails/engine.rb:524:in `call'
+[5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) lib/unicorn/http_server.rb:634:in `process_client'
+[5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) lib/unicorn/http_server.rb:732:in `worker_loop'
+[5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) lib/unicorn/http_server.rb:547:in `spawn_missing_workers'
+[5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) lib/unicorn/http_server.rb:143:in `start'
+[5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) bin/unicorn:128:in `<top (required)>'
+[5a671a79-df26-48df-8093-983388f8e482] /srv/examplevac/shared/bundle/ruby/2.7.0/bin/ruby_executable_hooks:24:in `<main>'
+I, [2021-11-26T12:17:02.005864 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482] Processing by ErrorsController#not_found as */*
+I, [2021-11-26T12:17:02.005942 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482]   Parameters: {"month"=>"2021-11-23"}
+W, [2021-11-26T12:17:02.006034 #10151]  WARN -- : [5a671a79-df26-48df-8093-983388f8e482] HTTP Origin header (https://example.de) didn't match request.base_url (https://impfen.example.de)
+I, [2021-11-26T12:17:02.006217 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482] Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+I, [2021-11-26T12:26:19.815457 #10411]  INFO -- : 2021-11-26T12:26:19+0000: [Worker(delayed_job host:example-production pid:10411)] Job Appointments::Worker (id=148694) (queue=default) RUNNING
+I, [2021-11-26T12:26:19.820950 #10411]  INFO -- : 2021-11-26T12:26:19+0000: [Worker(delayed_job host:example-production pid:10411)] Job Appointments::Worker (id=148694) (queue=default) COMPLETED after 0.0054
+I, [2021-11-26T12:26:19.822087 #10411]  INFO -- : 2021-11-26T12:26:19+0000: [Worker(delayed_job host:example-production pid:10411)] 1 jobs processed at 109.5649 j/s, 0 failed
+I, [2021-11-26T12:19:47.056297 #10411]  INFO -- : 2021-11-26T12:19:47+0000: [Worker(delayed_job host:example-production pid:10411)] Job GeoLocationSearch (id=148684) (queue=default) RUNNING
+I, [2021-11-26T12:19:47.212675 #10411]  INFO -- : 2021-11-26T12:19:47+0000: [Worker(delayed_job host:example-production pid:10411)] Job GeoLocationSearch (id=148684) (queue=default) COMPLETED after 0.1563
+I, [2021-11-26T12:19:47.214852 #10411]  INFO -- : 2021-11-26T12:19:47+0000: [Worker(delayed_job host:example-production pid:10411)] Job ActionMailer::Parameterized::DeliveryJob [773a1596-eea7-4780-8182-05627df17492] from DelayedJob(mailers) with arguments: ...
+I, [2021-11-26T12:19:47.215809 #10411]  INFO -- : [ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [773a1596-eea7-4780-8182-05627df17492] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 773a1596-eea7-4780-8182-05627df17492) from DelayedJob(mailers) with arguments: ...
+I, [2021-11-26T12:19:47.216571 #10411]  INFO -- : [ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [773a1596-eea7-4780-8182-05627df17492]   Rendering prosp...
+I, [2021-11-26T12:19:47.217041 #10411]  INFO -- : [ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [773a1596-eea7-4780-8182-05627df17492]   Rendered pro...
+I, [2021-11-26T12:19:47.247885 #10411]  INFO -- : [ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [773a1596-eea7-4780-8182-05627df17492] Sent mail to hannes.d.simon@gmail.com (30.4ms)
+I, [2021-11-26T12:19:47.247998 #10411]  INFO -- : [ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [773a1596-eea7-4780-8182-05627df17492] Performed ActionMailer::Parameterized::DeliveryJob (Job ID: 773a1596-eea7-4780-8182-05627df17492) from DelayedJob(mailers) in 32.07ms
+I, [2021-11-26T12:19:47.250173 #10411]  INFO -- : 2021-11-26T12:19:47+0000: [Worker(delayed_job host:example-production pid:10411)] Job ActionMailer::Parameterized::DeliveryJob [773a1596-eea7-4780-8182-05627df17492] from DelayedJob(mailers) with arguments: ...
+I, [2021-11-26T12:19:47.251255 #10411]  INFO -- : 2021-11-26T12:19:47+0000: [Worker(delayed_job host:example-production pid:10411)] 2 jobs processed at 9.8163 j/s, 0 failed
+W, [2021-11-26T01:15:02.956981 #20976]  WARN -- : Creating scope :for_foo. Overwriting existing method Foobar::CenterFoo.for_foo.
+F, [2021-11-26T07:36:47.167359 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc]   
+F, [2021-11-26T07:36:47.167439 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] ActiveModel::MissingAttributeError (can't write unknown attribute `consent_privacy`):
+F, [2021-11-26T07:36:47.167464 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc]   
+F, [2021-11-26T07:36:47.167486 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] app/controllers/foo_controller.rb:59:in `create'
+W, [2021-11-26T07:36:47.168373 #18965]  WARN -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] Can't verify CSRF token authenticity.
