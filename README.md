@@ -42,6 +42,10 @@ puts parser.actions.select(&:fatal?).map(&:headline)
 
 ## Changelog
 
+### 0.0.3
+
+* Adding `URI::InvalidURIError` as known exceptions
+
 ### 0.0.2
 
 * Adding `ActionController::InvalidAuthenticityToken` as known exceptions

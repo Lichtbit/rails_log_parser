@@ -6,8 +6,8 @@ RSpec.describe RailsLogParser do
 
   describe '.from_file' do
     it 'parses file' do
-      expect(parser.actions.count).to eq 11
-      expect(parser.actions.count(&:fatal?)).to eq 4
+      expect(parser.actions.count).to eq 12
+      expect(parser.actions.count(&:fatal?)).to eq 5
       expect(parser.actions.count(&:info?)).to eq 6
       expect(parser.actions.count(&:warn?)).to eq 1
       expect(parser.actions.count(&:without_request?)).to eq 3
@@ -16,11 +16,13 @@ RSpec.describe RailsLogParser do
         'ActionController::RoutingError (No route matches [OPTIONS] "/c....',
         "ActiveModel::MissingAttributeError (can't write unknown attribute `consent_privacy`):",
         'ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):',
+        'URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):',
       ]
       expect(parser.actions.select(&:known_exception?).map(&:headline)).to eq [
         "ActiveRecord::RecordNotFound (Couldn't find Foobars::CenterFoo):",
         'ActionController::RoutingError (No route matches [OPTIONS] "/c....',
         'ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):',
+        'URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):',
       ]
     end
   end
