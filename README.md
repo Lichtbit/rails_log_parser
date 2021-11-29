@@ -40,6 +40,12 @@ parser = RailsLogParser::Parser.from_file(log_path)
 puts parser.actions.select(&:fatal?).map(&:headline)
 ```
 
+## Changelog
+
+### 0.0.2
+
+* Adding `ActionController::InvalidAuthenticityToken` as known exceptions
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Lichtbit/rails_log_parser.

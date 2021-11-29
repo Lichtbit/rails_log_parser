@@ -12,6 +12,7 @@ class RailsLogParser::Action
     'ActiveRecord::RecordNotFound' => :fatal,
     'ActionController::RoutingError' => :fatal,
     "Can't verify CSRF token authenticity." => :warn,
+    "ActionController::InvalidAuthenticityToken" => :fatal,
   }.freeze
 
   extend Enumerize

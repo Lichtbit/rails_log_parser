@@ -68,3 +68,18 @@ F, [2021-11-26T07:36:47.167439 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9
 F, [2021-11-26T07:36:47.167464 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc]   
 F, [2021-11-26T07:36:47.167486 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] app/controllers/foo_controller.rb:59:in `create'
 W, [2021-11-26T07:36:47.168373 #18965]  WARN -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] Can't verify CSRF token authenticity.
+I, [2021-11-29T06:32:12.403230 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by Public::AppointmentsController#create as HTML
+I, [2021-11-29T06:32:12.403328 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-", "...
+W, [2021-11-29T06:32:12.403809 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
+I, [2021-11-29T06:32:12.404189 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+F, [2021-11-29T06:32:12.405137 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
+F, [2021-11-29T06:32:12.405174 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+F, [2021-11-29T06:32:12.405215 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
+F, [2021-11-29T06:32:12.405252 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+[c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+[c295df19-8aa6-4a8b-bdbe-8640b2022f63] devise (4.7.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+[c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+I, [2021-11-29T06:32:12.405650 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by ErrorsController#unacceptable as HTML
+I, [2021-11-29T06:32:12.405739 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-...
+W, [2021-11-29T06:32:12.405997 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
+I, [2021-11-29T06:32:12.406165 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
