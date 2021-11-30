@@ -23,7 +23,6 @@ RSpec.describe RailsLogParser do
         "ActiveRecord::RecordNotFound (Couldn't find Foobars::CenterFoo):",
         'ActionController::RoutingError (No route matches [OPTIONS] "/c....',
         'ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):',
-        'URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):',
       ]
     end
   end
@@ -36,8 +35,9 @@ RSpec.describe RailsLogParser do
 
 
 
-        2 lines with fatal:
+        3 lines with fatal:
           ActiveModel::MissingAttributeError (can't write unknown attribute `consent_privacy`):
+          URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):
           ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column foos.first_name does not exist
 
 

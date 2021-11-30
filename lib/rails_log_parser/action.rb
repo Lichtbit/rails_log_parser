@@ -13,7 +13,6 @@ class RailsLogParser::Action
     'ActionController::RoutingError' => :fatal,
     "Can't verify CSRF token authenticity." => :warn,
     'ActionController::InvalidAuthenticityToken' => :fatal,
-    'URI::InvalidURIError' => :fatal,
   }.freeze
 
   extend Enumerize

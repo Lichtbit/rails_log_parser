@@ -42,6 +42,10 @@ puts parser.actions.select(&:fatal?).map(&:headline)
 
 ## Changelog
 
+### 0.0.5
+
+* Removing `URI::InvalidURIError` as known exceptions
+
 ### 0.0.4
 
 * Handle stacktrace of fatals too
