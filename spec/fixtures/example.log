@@ -94,3 +94,30 @@ I, [2021-11-29T09:43:24.659340 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb
 I, [2021-11-29T09:43:24.667484 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendering errors/internal_server_error.html.haml within layouts/landingpage
 I, [2021-11-29T09:43:24.669971 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendered errors/internal_server_error.html.haml within layouts/landingpage (2.4ms)
 I, [2021-11-29T09:43:24.671137 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Completed 500 Internal Server Error in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+I, [2021-11-30T10:52:29.710940 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Started GET "/foos?states=&search=s" for 22.26 at 2021-11-30 10:52:29 +0000
+I, [2021-11-30T10:52:29.711436 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by foosController#index as HTML
+I, [2021-11-30T10:52:29.711460 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
+I, [2021-11-30T10:52:29.718823 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendering foos/index.html.haml within layouts/application
+I, [2021-11-30T10:52:29.723290 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered foos/index.html.haml within layouts/application (4.4ms)
+I, [2021-11-30T10:52:29.723409 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.6ms)
+F, [2021-11-30T10:52:29.724057 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
+F, [2021-11-30T10:52:29.724080 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column foos.first_name does not exist
+LINE 1: ...D "foos"."discharged" = $6 AND CONCAT("foo...
+                                                             ^
+: SELECT  "foos".* FROM "foos" WHERE "foos"."foo_id" IN ($1, $2, $3, $4, $5) ....
+F, [2021-11-30T10:52:29.724148 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]     15: %section
+[ea517b3d-0397-465f-85de-b100a6ff9287]     16:   = scope_selector(scopes(:states))
+[ea517b3d-0397-465f-85de-b100a6ff9287]     17: 
+[ea517b3d-0397-465f-85de-b100a6ff9287]     18: = lb_list(@foos) do |foo|
+[ea517b3d-0397-465f-85de-b100a6ff9287]     19:   = lb_list_item foo.title, subtitle: foo.foo.name, url: foo
+[ea517b3d-0397-465f-85de-b100a6ff9287]     20: 
+[ea517b3d-0397-465f-85de-b100a6ff9287]     21: = paginator_section @foos
+F, [2021-11-30T10:52:29.724162 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
+F, [2021-11-30T10:52:29.724173 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] config/initializers/active_record_relation_crypto_extensions.rb:12:in `records'
+[ea517b3d-0397-465f-85de-b100a6ff9287] app/helpers/aaa_helper.rb:58:in `block in lb_list'
+[ea517b3d-0397-465f-85de-b100a6ff9287] app/helpers/aaa_helper.rb:57:in `lb_list'
+[ea517b3d-0397-465f-85de-b100a6ff9287] app/views/foos/index.html.haml:18:in `_app_vie_index_html_haml__1217682863923570007_35680'
+I, [2021-11-30T10:52:29.724493 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by ErrorsController#internal_server_error as HTML
+I, [2021-11-30T10:52:29.724516 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
+I, [2021-11-30T10:52:29.733214 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered lb/_nav_vertical.html.haml (4.5ms)
+I, [2021-11-30T10:52:29.733560 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
