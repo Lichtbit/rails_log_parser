@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### 0.0.7
+
+* Remove empty lines on summary without report
+
 ### 0.0.6
 
 * Adding heuristic to rate known exceptions

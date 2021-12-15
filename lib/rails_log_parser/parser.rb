@@ -59,8 +59,8 @@ class RailsLogParser::Parser
       if stats.present?
         summary_output.push('Heuristic match!')
         stats.each { |k, v| summary_output.push("- #{k}: #{v}") }
+        summary_output.push("\n\n")
       end
-      summary_output.push("\n\n")
     end
 
     summary_output.join("\n")

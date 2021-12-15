@@ -73,6 +73,18 @@ RSpec.describe RailsLogParser do
         TEXT
       end
     end
+
+    context 'when heuristic return no rates and actions are empty' do
+      before do
+        parser.instance_variable_set(:@heuristic, 'path')
+        parser.instance_variable_set(:@actions, {})
+        expect(RailsLogParser::HeuristicStatFile).to receive(:build_heuristic).and_return({})
+      end
+
+      it 'generates more text' do
+        expect(parser.summary).to eq ''
+      end
+    end
   end
 
   describe '#enable_heuristic' do
