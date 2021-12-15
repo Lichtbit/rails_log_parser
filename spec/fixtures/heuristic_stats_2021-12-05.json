@@ -1,0 +1,11 @@
+{
+    "actions": 51505,
+    "ends_at": "2021-12-05T23:59:28.349+01:00",
+    "known_exceptions": {
+        "ActionController::InvalidAuthenticityToken": 22,
+        "ActionController::RoutingError": 64,
+        "ActiveRecord::RecordNotFound": 331,
+        "Can't verify CSRF token authenticity.": 0
+    },
+    "starts_at": "2021-12-05T00:00:54.953+01:00"
+}

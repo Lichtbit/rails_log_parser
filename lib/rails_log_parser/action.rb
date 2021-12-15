@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'time'
 require 'securerandom'
 
@@ -18,6 +19,7 @@ class RailsLogParser::Action
   extend Enumerize
   enumerize :severity, in: SEVERITIES, predicates: true
   enumerize :type, in: %i[request without_request delayed_job active_job], predicates: true
+  attr_reader :datetime
 
   def initialize(type, id)
     self.type = type
@@ -35,9 +37,9 @@ class RailsLogParser::Action
     @headline = nil
   end
 
-  def known_exception?
+  def known_exception?(key = nil)
     @messages.any? do |message|
-      KNOWN_EXCEPTIONS.any? { |e, s| message.include?(e) && severity == s }
+      KNOWN_EXCEPTIONS.any? { |e, s| message.include?(e) && severity == s && (key.nil? || key == e) }
     end
   end
 

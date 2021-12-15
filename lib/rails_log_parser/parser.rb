@@ -24,6 +24,12 @@ class RailsLogParser::Parser
   def initialize
     @actions = {}
     @not_parseable_lines = []
+    @heuristic = nil
+  end
+
+  def enable_heuristic(path)
+    @heuristic = path
+    @heuristic_today = RailsLogParser::HeuristicStatFile.new(@heuristic, Date.today).tap { |p| p.write_stats(actions) }
   end
 
   def summary(last_minutes: nil)
@@ -32,23 +38,32 @@ class RailsLogParser::Parser
       from = last_minutes.to_i.minutes.ago
       relevant = relevant.select { |a| a.after?(from) }
     end
-    @summary_output = []
+    summary_output = []
     if @not_parseable_lines.present?
-      @summary_output.push('Not parseable lines:')
-      @summary_output += @not_parseable_lines.map { |line| "  #{line}" }
-      @summary_output.push("\n\n")
+      summary_output.push('Not parseable lines:')
+      summary_output += @not_parseable_lines.map { |line| "  #{line}" }
+      summary_output.push("\n\n")
     end
 
     %i[warn error fatal].each do |severity|
       selected = relevant.select { |a| a.public_send("#{severity}?") }.reject(&:known_exception?)
       next if selected.blank?
 
-      @summary_output.push("#{selected.count} lines with #{severity}:")
-      @summary_output += selected.map(&:headline).map { |line| "  #{line}" }
-      @summary_output.push("\n\n")
+      summary_output.push("#{selected.count} lines with #{severity}:")
+      summary_output += selected.map(&:headline).map { |line| "  #{line}" }
+      summary_output.push("\n\n")
     end
 
-    @summary_output.join("\n")
+    unless @heuristic.nil?
+      stats = RailsLogParser::HeuristicStatFile.build_heuristic(@heuristic, @heuristic_today)
+      if stats.present?
+        summary_output.push('Heuristic match!')
+        stats.each { |k, v| summary_output.push("- #{k}: #{v}") }
+      end
+      summary_output.push("\n\n")
+    end
+
+    summary_output.join("\n")
   end
 
   def actions

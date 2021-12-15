@@ -1,10 +1,10 @@
-I, [2021-11-28T00:00:35.744942 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Started GET "/blub....
-I, [2021-11-28T00:00:35.745665 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Processing by Public::blubbersController#index as HTML
-I, [2021-11-28T00:00:35.750066 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendering publi...
-I, [2021-11-28T00:00:35.754069 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered pub...
-I, [2021-11-28T00:00:35.758702 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lb/...
-I, [2021-11-28T00:00:35.759131 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lay...
-I, [2021-11-28T00:00:35.759339 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 2.6ms)
+I, [2021-11-26T00:00:35.744942 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Started GET "/blub....
+I, [2021-11-26T00:00:35.745665 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Processing by Public::blubbersController#index as HTML
+I, [2021-11-26T00:00:35.750066 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendering publi...
+I, [2021-11-26T00:00:35.754069 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered pub...
+I, [2021-11-26T00:00:35.758702 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lb/...
+I, [2021-11-26T00:00:35.759131 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendered lay...
+I, [2021-11-26T00:00:35.759339 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 2.6ms)
 I, [2021-11-26T12:08:56.245864 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Started DELETE "/c/gg....
 I, [2021-11-26T12:08:56.246779 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57] Processing by Public::NlluuController#destroy as HTML
 I, [2021-11-26T12:08:56.246887 #10151]  INFO -- : [518ef08b-bd20-4918-b6d1-650ce803bf57]   Parameters: {....
@@ -46,7 +46,7 @@ F, [2021-11-26T12:17:01.996554 #10151] FATAL -- : [5a671a79-df26-48df-8093-98338
 [5a671a79-df26-48df-8093-983388f8e482] unicorn (6.0.0) bin/unicorn:128:in `<top (required)>'
 [5a671a79-df26-48df-8093-983388f8e482] /srv/examplevac/shared/bundle/ruby/2.7.0/bin/ruby_executable_hooks:24:in `<main>'
 I, [2021-11-26T12:17:02.005864 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482] Processing by ErrorsController#not_found as */*
-I, [2021-11-26T12:17:02.005942 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482]   Parameters: {"month"=>"2021-11-23"}
+I, [2021-11-26T12:17:02.005942 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482]   Parameters: {"month"=>"2021-11-26"}
 W, [2021-11-26T12:17:02.006034 #10151]  WARN -- : [5a671a79-df26-48df-8093-983388f8e482] HTTP Origin header (https://example.de) didn't match request.base_url (https://impfen.example.de)
 I, [2021-11-26T12:17:02.006217 #10151]  INFO -- : [5a671a79-df26-48df-8093-983388f8e482] Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
 I, [2021-11-26T12:26:19.815457 #10411]  INFO -- : 2021-11-26T12:26:19+0000: [Worker(delayed_job host:example-production pid:10411)] Job Appointments::Worker (id=148694) (queue=default) RUNNING
@@ -68,56 +68,56 @@ F, [2021-11-26T07:36:47.167439 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9
 F, [2021-11-26T07:36:47.167464 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc]   
 F, [2021-11-26T07:36:47.167486 #18965] FATAL -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] app/controllers/foo_controller.rb:59:in `create'
 W, [2021-11-26T07:36:47.168373 #18965]  WARN -- : [9e488fa2-bbb2-4b67-b98e-93cb9cfc2fcc] Can't verify CSRF token authenticity.
-I, [2021-11-29T06:32:12.403230 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by Public::AppointmentsController#create as HTML
-I, [2021-11-29T06:32:12.403328 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-", "...
-W, [2021-11-29T06:32:12.403809 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
-I, [2021-11-29T06:32:12.404189 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
-F, [2021-11-29T06:32:12.405137 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
-F, [2021-11-29T06:32:12.405174 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
-F, [2021-11-29T06:32:12.405215 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
-F, [2021-11-29T06:32:12.405252 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+I, [2021-11-26T06:32:12.403230 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by Public::AppointmentsController#create as HTML
+I, [2021-11-26T06:32:12.403328 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-", "...
+W, [2021-11-26T06:32:12.403809 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
+I, [2021-11-26T06:32:12.404189 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+F, [2021-11-26T06:32:12.405137 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
+F, [2021-11-26T06:32:12.405174 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+F, [2021-11-26T06:32:12.405215 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   
+F, [2021-11-26T06:32:12.405252 #27772] FATAL -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
 [c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
 [c295df19-8aa6-4a8b-bdbe-8640b2022f63] devise (4.7.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
 [c295df19-8aa6-4a8b-bdbe-8640b2022f63] actionpack (5.2.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
-I, [2021-11-29T06:32:12.405650 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by ErrorsController#unacceptable as HTML
-I, [2021-11-29T06:32:12.405739 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-...
-W, [2021-11-29T06:32:12.405997 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
-I, [2021-11-29T06:32:12.406165 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
-I, [2021-11-29T09:43:24.657326 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Started GET "/c..." for 109.55.551.59 at 2021-11-29 09:43:24 +0000
-F, [2021-11-29T09:43:24.658584 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   
-F, [2021-11-29T09:43:24.658636 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):
-F, [2021-11-29T09:43:24.658658 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   
-F, [2021-11-29T09:43:24.658694 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] /home/smartimer360/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/rfc3986_parser.rb:67:in `split'
+I, [2021-11-26T06:32:12.405650 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Processing by ErrorsController#unacceptable as HTML
+I, [2021-11-26T06:32:12.405739 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63]   Parameters: {"utf8"=>"✓", "authenticity_token"=>"qwPvckEbDLwflY-...
+W, [2021-11-26T06:32:12.405997 #27772]  WARN -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Can't verify CSRF token authenticity.
+I, [2021-11-26T06:32:12.406165 #27772]  INFO -- : [c295df19-8aa6-4a8b-bdbe-8640b2022f63] Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms)
+I, [2021-11-26T09:43:24.657326 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Started GET "/c..." for 109.55.551.59 at 2021-11-26 09:43:24 +0000
+F, [2021-11-26T09:43:24.658584 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   
+F, [2021-11-26T09:43:24.658636 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] URI::InvalidURIError (bad URI(is not URI?): "https://example.de/c..../%{all}"):
+F, [2021-11-26T09:43:24.658658 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   
+F, [2021-11-26T09:43:24.658694 #8592] FATAL -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] /home/smartimer360/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/rfc3986_parser.rb:67:in `split'
 [03099aef-890d-4b8f-bf39-c45acb7f4422] /home/smartimer360/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/rfc3986_parser.rb:73:in `parse'
 [03099aef-890d-4b8f-bf39-c45acb7f4422] /home/smartimer360/.rvm/rubies/ruby-2.7.2/lib/ruby/2.7.0/uri/common.rb:234:in `parse'
-I, [2021-11-29T09:43:24.659340 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Processing by ErrorsController#internal_server_error as HTML
-I, [2021-11-29T09:43:24.667484 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendering errors/internal_server_error.html.haml within layouts/landingpage
-I, [2021-11-29T09:43:24.669971 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendered errors/internal_server_error.html.haml within layouts/landingpage (2.4ms)
-I, [2021-11-29T09:43:24.671137 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Completed 500 Internal Server Error in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
-I, [2021-11-30T10:52:29.710940 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Started GET "/foos?states=&search=s" for 22.26 at 2021-11-30 10:52:29 +0000
-I, [2021-11-30T10:52:29.711436 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by foosController#index as HTML
-I, [2021-11-30T10:52:29.711460 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
-I, [2021-11-30T10:52:29.718823 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendering foos/index.html.haml within layouts/application
-I, [2021-11-30T10:52:29.723290 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered foos/index.html.haml within layouts/application (4.4ms)
-I, [2021-11-30T10:52:29.723409 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.6ms)
-F, [2021-11-30T10:52:29.724057 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
-F, [2021-11-30T10:52:29.724080 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column foos.first_name does not exist
+I, [2021-11-26T09:43:24.659340 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Processing by ErrorsController#internal_server_error as HTML
+I, [2021-11-26T09:43:24.667484 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendering errors/internal_server_error.html.haml within layouts/landingpage
+I, [2021-11-26T09:43:24.669971 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422]   Rendered errors/internal_server_error.html.haml within layouts/landingpage (2.4ms)
+I, [2021-11-26T09:43:24.671137 #8592]  INFO -- : [03099aef-890d-4b8f-bf39-c45acb7f4422] Completed 500 Internal Server Error in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+I, [2021-11-26T10:52:29.710940 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Started GET "/foos?states=&search=s" for 22.26 at 2021-11-26 10:52:29 +0000
+I, [2021-11-26T10:52:29.711436 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by foosController#index as HTML
+I, [2021-11-26T10:52:29.711460 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
+I, [2021-11-26T10:52:29.718823 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendering foos/index.html.haml within layouts/application
+I, [2021-11-26T10:52:29.723290 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered foos/index.html.haml within layouts/application (4.4ms)
+I, [2021-11-26T10:52:29.723409 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.6ms)
+F, [2021-11-26T10:52:29.724057 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
+F, [2021-11-26T10:52:29.724080 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column foos.first_name does not exist
 LINE 1: ...D "foos"."discharged" = $6 AND CONCAT("foo...
                                                              ^
 : SELECT  "foos".* FROM "foos" WHERE "foos"."foo_id" IN ($1, $2, $3, $4, $5) ....
-F, [2021-11-30T10:52:29.724148 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]     15: %section
+F, [2021-11-26T10:52:29.724148 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]     15: %section
 [ea517b3d-0397-465f-85de-b100a6ff9287]     16:   = scope_selector(scopes(:states))
 [ea517b3d-0397-465f-85de-b100a6ff9287]     17: 
 [ea517b3d-0397-465f-85de-b100a6ff9287]     18: = lb_list(@foos) do |foo|
 [ea517b3d-0397-465f-85de-b100a6ff9287]     19:   = lb_list_item foo.title, subtitle: foo.foo.name, url: foo
 [ea517b3d-0397-465f-85de-b100a6ff9287]     20: 
 [ea517b3d-0397-465f-85de-b100a6ff9287]     21: = paginator_section @foos
-F, [2021-11-30T10:52:29.724162 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
-F, [2021-11-30T10:52:29.724173 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] config/initializers/active_record_relation_crypto_extensions.rb:12:in `records'
+F, [2021-11-26T10:52:29.724162 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   
+F, [2021-11-26T10:52:29.724173 #20389] FATAL -- : [ea517b3d-0397-465f-85de-b100a6ff9287] config/initializers/active_record_relation_crypto_extensions.rb:12:in `records'
 [ea517b3d-0397-465f-85de-b100a6ff9287] app/helpers/aaa_helper.rb:58:in `block in lb_list'
 [ea517b3d-0397-465f-85de-b100a6ff9287] app/helpers/aaa_helper.rb:57:in `lb_list'
 [ea517b3d-0397-465f-85de-b100a6ff9287] app/views/foos/index.html.haml:18:in `_app_vie_index_html_haml__1217682863923570007_35680'
-I, [2021-11-30T10:52:29.724493 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by ErrorsController#internal_server_error as HTML
-I, [2021-11-30T10:52:29.724516 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
-I, [2021-11-30T10:52:29.733214 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered lb/_nav_vertical.html.haml (4.5ms)
-I, [2021-11-30T10:52:29.733560 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+I, [2021-11-26T10:52:29.724493 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Processing by ErrorsController#internal_server_error as HTML
+I, [2021-11-26T10:52:29.724516 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Parameters: {"states"=>"", "search"=>"s"}
+I, [2021-11-26T10:52:29.733214 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287]   Rendered lb/_nav_vertical.html.haml (4.5ms)
+I, [2021-11-26T10:52:29.733560 #20389]  INFO -- : [ea517b3d-0397-465f-85de-b100a6ff9287] Completed 500 Internal Server Error in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
