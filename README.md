@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### next version
+
+* Adding `ActionController::UnfilteredParameters` as known exceptions
+
 ### 0.0.7
 
 * Remove empty lines on summary without report

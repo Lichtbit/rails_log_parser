@@ -1,3 +1,13 @@
+I, [2021-11-26T00:04:44.292577 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175] Started GET "/centers?locality=[FILTERED]&vaccine%5B0%5D=4" for 127.0.0.1 at 2021-11-26 00:04:44 +0000
+I, [2021-11-26T00:04:44.293426 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175] Processing by Public::CentersController#index as */*
+I, [2021-11-26T00:04:44.293499 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175]   Parameters: {"locality"=>"[FILTERED]", "vaccine"=>{"0"=>"4"}}
+I, [2021-11-26T00:04:44.294207 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+F, [2021-11-26T00:04:44.294889 #22988] FATAL -- : [55cd4db0-7439-468a-8613-0065179df175]   
+F, [2021-11-26T00:04:44.294924 #22988] FATAL -- : [55cd4db0-7439-468a-8613-0065179df175] ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):
+F, [2021-11-26T00:04:44.294945 #22988] FATAL -- : [55cd4db0-7439-468a-8613-0065179df175]   
+F, [2021-11-26T00:04:44.294965 #22988] FATAL -- : [55cd4db0-7439-468a-8613-0065179df175] app/controllers/public/centers_controller.rb:23:in `set_page_tabs'
+I, [2021-11-26T00:04:44.295342 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175] Processing by ErrorsController#internal_server_error as */*
+I, [2021-11-26T00:04:44.295384 #22988]  INFO -- : [55cd4db0-7439-468a-8613-0065179df175]   Parameters: {"locality"=>"[FILTERED]", "vaccine"=>{"0"=>"4"}}
 I, [2021-11-26T00:00:35.744942 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Started GET "/blub....
 I, [2021-11-26T00:00:35.745665 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710] Processing by Public::blubbersController#index as HTML
 I, [2021-11-26T00:00:35.750066 #10155]  INFO -- : [8a9b2f43-0a7c-477d-b465-27af055f9710]   Rendering publi...

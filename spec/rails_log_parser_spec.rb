@@ -8,13 +8,14 @@ RSpec.describe RailsLogParser do
 
   describe '.from_file' do
     it 'parses file' do
-      expect(parser.actions.count).to eq 13
-      expect(parser.actions.count(&:fatal?)).to eq 6
+      expect(parser.actions.count).to eq 14
+      expect(parser.actions.count(&:fatal?)).to eq 7
       expect(parser.actions.count(&:info?)).to eq 6
       expect(parser.actions.count(&:warn?)).to eq 1
       expect(parser.actions.count(&:without_request?)).to eq 3
       expect(parser.actions.select(&:fatal?).map(&:headline)).to eq [
-        "ActiveRecord::RecordNotFound (Couldn't find Foobars::CenterFoo):",
+        'ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):',
+        'ActiveRecord::RecordNotFound (Couldn\'t find Foobars::CenterFoo):',
         'ActionController::RoutingError (No route matches [OPTIONS] "/c....',
         "ActiveModel::MissingAttributeError (can't write unknown attribute `consent_privacy`):",
         'ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):',
@@ -22,7 +23,8 @@ RSpec.describe RailsLogParser do
         'ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column foos.first_name does not exist',
       ]
       expect(parser.actions.select(&:known_exception?).map(&:headline)).to eq [
-        "ActiveRecord::RecordNotFound (Couldn't find Foobars::CenterFoo):",
+        'ActionController::UnfilteredParameters (unable to convert unpermitted parameters to hash):',
+        'ActiveRecord::RecordNotFound (Couldn\'t find Foobars::CenterFoo):',
         'ActionController::RoutingError (No route matches [OPTIONS] "/c....',
         'ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):',
       ]
@@ -93,11 +95,12 @@ RSpec.describe RailsLogParser do
       Dir.mktmpdir do |dir|
         expect(File).to receive(:write).with(
           File.join(dir, 'heuristic_stats_2021-11-26.json'),
-          '{"actions":13,"known_exceptions":{' \
+          '{"actions":14,"known_exceptions":{' \
             '"ActiveRecord::RecordNotFound":1,' \
             '"ActionController::RoutingError":1,' \
             "\"Can't verify CSRF token authenticity.\":0," \
-            '"ActionController::InvalidAuthenticityToken":1},' \
+            '"ActionController::InvalidAuthenticityToken":1,'\
+            '"ActionController::UnfilteredParameters":1},' \
           '"starts_at":"2021-11-26 00:00:35 +0100",' \
           '"ends_at":"2021-11-26 12:26:19 +0100"}',
         )
