@@ -49,7 +49,7 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
-### next version
+### 0.0.8
 
 * Adding `ActionController::UnfilteredParameters` as known exceptions
 * Adjust heuristic rate for better matching

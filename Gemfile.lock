@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    rails_log_parser (0.0.7)
+    rails_log_parser (0.0.8)
       enumerize (~> 2.4)
       json (>= 2.0)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4.1)
+    activesupport (6.1.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -16,12 +16,12 @@ GEM
       zeitwerk (~> 2.3)
     concurrent-ruby (1.1.9)
     diff-lcs (1.4.4)
-    enumerize (2.4.0)
+    enumerize (2.5.0)
       activesupport (>= 3.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     json (2.6.1)
-    minitest (5.14.4)
+    minitest (5.15.0)
     rake (12.3.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -38,7 +38,7 @@ GEM
     rspec-support (3.10.3)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.3)
 
 PLATFORMS
   ruby
