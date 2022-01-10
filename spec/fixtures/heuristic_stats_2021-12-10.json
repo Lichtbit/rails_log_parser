@@ -2,7 +2,7 @@
     "actions": 71510,
     "ends_at": "2021-12-10T23:59:35.060+01:00",
     "known_exceptions": {
-        "ActionController::InvalidAuthenticityToken": 78,
+        "ActionController::InvalidAuthenticityToken": 143,
         "ActionController::RoutingError": 232,
         "ActiveRecord::RecordNotFound": 367,
         "Can't verify CSRF token authenticity.": 0

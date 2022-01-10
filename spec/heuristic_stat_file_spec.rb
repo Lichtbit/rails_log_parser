@@ -12,7 +12,7 @@ RSpec.describe RailsLogParser::HeuristicStatFile do
         heuristic_today = described_class.new(fixture_path, date)
         heuristic_today.load_stats
         expect(described_class.build_heuristic(fixture_path, heuristic_today)).to eq(
-          'ActiveRecord::RecordNotFound' => 0.011443875117185698,
+          'ActiveRecord::RecordNotFound' => 0.020452809286129837,
         )
       end
     end
@@ -24,7 +24,7 @@ RSpec.describe RailsLogParser::HeuristicStatFile do
         heuristic_today = described_class.new(fixture_path, date)
         heuristic_today.load_stats
         expect(described_class.build_heuristic(fixture_path, heuristic_today)).to eq(
-          'ActionController::RoutingError' => 0.01061809843316415,
+          'ActionController::RoutingError' => 0.02072690106763237,
         )
       end
     end
@@ -36,7 +36,7 @@ RSpec.describe RailsLogParser::HeuristicStatFile do
         heuristic_today = described_class.new(fixture_path, date)
         heuristic_today.load_stats
         expect(described_class.build_heuristic(fixture_path, heuristic_today)).to eq(
-          'ActionController::InvalidAuthenticityToken' => 0.010560302849964046,
+          'ActionController::InvalidAuthenticityToken' => 0.020738692557993016,
         )
       end
     end
@@ -58,7 +58,7 @@ RSpec.describe RailsLogParser::HeuristicStatFile do
         heuristic_today = described_class.new(fixture_path, date)
         heuristic_today.load_stats
         expect(described_class.build_heuristic(fixture_path, heuristic_today)).to eq(
-          'ActiveRecord::RecordNotFound' => 0.010111883572196443,
+          'ActiveRecord::RecordNotFound' => 0.024915118043906583,
         )
       end
     end

@@ -51,7 +51,7 @@ RSpec.describe RailsLogParser do
     context 'when heuristic return bad rates' do
       before do
         parser.instance_variable_set(:@heuristic, 'path')
-        expect(RailsLogParser::HeuristicStatFile).to receive(:build_heuristic).and_return({ 'Error' => 0.0123 })
+        expect(RailsLogParser::HeuristicStatFile).to receive(:build_heuristic).and_return({ 'Error' => 0.02235 })
       end
 
       it 'generates more text' do
@@ -68,8 +68,8 @@ RSpec.describe RailsLogParser do
 
 
 
-          Heuristic match!
-          - Error: 0.0123
+          Heuristic match! (threshold: 0.02)
+          - Error: 0.0224
 
 
         TEXT

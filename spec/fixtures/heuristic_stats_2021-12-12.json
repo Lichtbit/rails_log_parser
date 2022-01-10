@@ -4,7 +4,7 @@
     "known_exceptions": {
         "ActionController::InvalidAuthenticityToken": 11,
         "ActionController::RoutingError": 63,
-        "ActiveRecord::RecordNotFound": 4004,
+        "ActiveRecord::RecordNotFound": 11154,
         "Can't verify CSRF token authenticity.": 0
     },
     "starts_at": "2021-12-12T00:00:08.351+01:00"

@@ -3,7 +3,7 @@
 require 'enumerize'
 
 module RailsLogParser
-  THRESHOLD_HEURISTIC = 0.01
+  THRESHOLD_HEURISTIC = 0.02
 end
 
 require_relative 'rails_log_parser/parser'

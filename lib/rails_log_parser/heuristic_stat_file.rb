@@ -11,7 +11,7 @@ RailsLogParser::HeuristicStatFile = Struct.new(:path, :date) do
       RailsLogParser::Action::KNOWN_EXCEPTIONS.each_key do |exception|
         sums[exception.to_sym] = 0
       end
-      7.times do |i|
+      10.times do |i|
         stats = RailsLogParser::HeuristicStatFile.new(path, today.date - (i + 1)).load_stats
         sums[:actions] += stats[:actions].to_i
         RailsLogParser::Action::KNOWN_EXCEPTIONS.each_key do |exception|

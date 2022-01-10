@@ -57,8 +57,8 @@ class RailsLogParser::Parser
     unless @heuristic.nil?
       stats = RailsLogParser::HeuristicStatFile.build_heuristic(@heuristic, @heuristic_today)
       if stats.present?
-        summary_output.push('Heuristic match!')
-        stats.each { |k, v| summary_output.push("- #{k}: #{v}") }
+        summary_output.push("Heuristic match! (threshold: #{RailsLogParser::HeuristicStatFile.heuristic_threshold})")
+        stats.each { |k, v| summary_output.push("- #{k}: #{v.round(4)}") }
         summary_output.push("\n\n")
       end
     end
