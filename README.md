@@ -49,7 +49,7 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
-### not released
+### 0.0.9
 
 * Message not parseable lines only once a day
 * Delete old heuristic stat files automaticly
