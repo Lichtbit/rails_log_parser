@@ -63,4 +63,19 @@ RSpec.describe RailsLogParser::HeuristicStatFile do
       end
     end
   end
+
+  describe '#delete_old_stats' do
+    let(:date) { Date.today }
+    let(:path) { File.dirname(RailsLogParser::Parser.log_path) }
+
+    it 'deletes old stat files' do
+      (0..39).map { |i| (Date.today - i) }.each do |date|
+        File.write(File.join(path, "heuristic_stats_#{date}.json"), "1")
+      end
+      expect(Dir[File.join(path, "*.json")].count).to eq 40
+
+      RailsLogParser::HeuristicStatFile.new(path, date).delete_old_stats
+      expect(Dir[File.join(path, "*.json")].count).to eq 20
+    end
+  end
 end

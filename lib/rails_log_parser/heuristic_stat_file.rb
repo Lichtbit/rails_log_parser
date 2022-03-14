@@ -49,7 +49,16 @@ RailsLogParser::HeuristicStatFile = Struct.new(:path, :date) do
     RailsLogParser::Action::KNOWN_EXCEPTIONS.each_key do |exception|
       @stats[:known_exceptions][exception.to_sym] = actions.count { |action| action.known_exception?(exception) }
     end
+
+    delete_old_stats
     File.write(heuristic_file_path, @stats.to_json)
+  end
+
+  def delete_old_stats
+    last_20_days = (0..19).map { |i| (Date.today - i) }.map { |date| File.join(path, "heuristic_stats_#{date}.json") }
+    Dir[File.join(path, 'heuristic_stats_*.json')].reject { |file| last_20_days.include?(file) }.each do |file|
+      File.unlink(file)
+    end
   end
 
   def load_stats

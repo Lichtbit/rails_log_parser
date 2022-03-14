@@ -91,7 +91,8 @@ RSpec.describe RailsLogParser do
 
   describe '#enable_heuristic' do
     it 'enables heuristic with stat files at path' do
-      expect(Date).to receive(:today).and_return(Date.parse('2021-11-26'))
+      allow(Date).to receive(:today).and_return(Date.parse('2021-11-26'))
+
       Dir.mktmpdir do |dir|
         expect(File).to receive(:write).with(
           File.join(dir, 'heuristic_stats_2021-11-26.json'),

@@ -52,6 +52,7 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 ### not released
 
 * Message not parseable lines only once a day
+* Delete old heuristic stat files automaticly
 
 ### 0.0.8
 
