@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### not released
+
+* Message not parseable lines only once a day
+
 ### 0.0.8
 
 * Adding `ActionController::UnfilteredParameters` as known exceptions

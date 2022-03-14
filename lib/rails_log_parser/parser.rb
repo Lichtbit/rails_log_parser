@@ -23,7 +23,7 @@ class RailsLogParser::Parser
 
   def initialize
     @actions = {}
-    @not_parseable_lines = []
+    @not_parseable_lines = RailsLogParser::NotParseableLines.new
     @heuristic = nil
   end
 
@@ -39,10 +39,11 @@ class RailsLogParser::Parser
       relevant = relevant.select { |a| a.after?(from) }
     end
     summary_output = []
-    if @not_parseable_lines.present?
+    if @not_parseable_lines.lines.present?
       summary_output.push('Not parseable lines:')
-      summary_output += @not_parseable_lines.map { |line| "  #{line}" }
+      summary_output += @not_parseable_lines.lines.map { |line| "  #{line}" }
       summary_output.push("\n\n")
+      @not_parseable_lines.save
     end
 
     %i[warn error fatal].each do |severity|
