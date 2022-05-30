@@ -20,9 +20,10 @@ RailsLogParser::HeuristicStatFile = Struct.new(:path, :date) do
       end
       output = {}
       RailsLogParser::Action::KNOWN_EXCEPTIONS.each_key do |exception|
-        next if sums[:actions] == 0
+        next if sums[:actions] < heuristic_min_actions
 
         quota = sums[exception.to_sym].to_f / sums[:actions]
+        next if quota == 0
         today_quota = today.rate(exception)
         next if today_quota == 0
 
@@ -34,6 +35,10 @@ RailsLogParser::HeuristicStatFile = Struct.new(:path, :date) do
 
     def heuristic_threshold
       @heuristic_threshold ||= ENV['RAILS_LOG_PARSER_THRESHOLD_HEURISTIC'] || RailsLogParser::THRESHOLD_HEURISTIC
+    end
+
+    def heuristic_min_actions
+      @heuristic_min_actions ||= ENV['RAILS_LOG_PARSER_MIN_ACTIONS_HEURISTIC'] || RailsLogParser::MIN_ACTIONS_HEURISTIC
     end
   end
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_log_parser (0.0.8)
+    rails_log_parser (0.0.10)
       enumerize (~> 2.4)
       json (>= 2.0)
 

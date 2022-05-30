@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### 0.0.10
+
+* Ignore periods with too few requests
+
 ### 0.0.9
 
 * Message not parseable lines only once a day
