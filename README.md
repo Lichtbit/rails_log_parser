@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### 0.0.11
+
+* Increase minimum requests value for heuristic
+
 ### 0.0.10
 
 * Ignore periods with too few requests

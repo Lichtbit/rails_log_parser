@@ -4,7 +4,7 @@ require 'enumerize'
 
 module RailsLogParser
   THRESHOLD_HEURISTIC = 0.02
-  MIN_ACTIONS_HEURISTIC = 10000
+  MIN_ACTIONS_HEURISTIC = 100000 # sum of last 10 days
 end
 
 require_relative 'rails_log_parser/parser'
