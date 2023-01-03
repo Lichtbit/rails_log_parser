@@ -96,14 +96,14 @@ RSpec.describe RailsLogParser do
       Dir.mktmpdir do |dir|
         expect(File).to receive(:write).with(
           File.join(dir, 'heuristic_stats_2021-11-26.json'),
-          '{"actions":14,"known_exceptions":{' \
-            '"ActiveRecord::RecordNotFound":1,' \
-            '"ActionController::RoutingError":1,' \
+          "{\"actions\":14,\"known_exceptions\":{" \
             "\"Can't verify CSRF token authenticity.\":0," \
-            '"ActionController::InvalidAuthenticityToken":1,'\
-            '"ActionController::UnfilteredParameters":1},' \
-          '"starts_at":"2021-11-26 00:00:35 +0100",' \
-          '"ends_at":"2021-11-26 12:26:19 +0100"}',
+            "\"ActionController::InvalidAuthenticityToken\":1," \
+            "\"ActionController::RoutingError\":1," \
+            "\"ActionController::UnfilteredParameters\":1," \
+            "\"ActionController::UnknownFormat\":0," \
+            "\"ActiveRecord::RecordNotFound\":1" \
+          "},\"starts_at\":\"2021-11-26 00:00:35 +0100\",\"ends_at\":\"2021-11-26 12:26:19 +0100\"}",
         )
 
         parser.enable_heuristic(dir)

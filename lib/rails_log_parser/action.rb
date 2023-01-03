@@ -10,11 +10,12 @@ class RailsLogParser::Action
 
   SEVERITIES = %i[debug info warn error fatal].freeze
   KNOWN_EXCEPTIONS = {
-    'ActiveRecord::RecordNotFound' => :fatal,
-    'ActionController::RoutingError' => :fatal,
     "Can't verify CSRF token authenticity." => :warn,
     'ActionController::InvalidAuthenticityToken' => :fatal,
+    'ActionController::RoutingError' => :fatal,
     'ActionController::UnfilteredParameters' => :fatal,
+    'ActionController::UnknownFormat' => :fatal,
+    'ActiveRecord::RecordNotFound' => :fatal,
   }.freeze
 
   extend Enumerize

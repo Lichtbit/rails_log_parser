@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### 0.0.12
+
+* Adding `ActionController::UnknownFormat` as known exceptions
+
 ### 0.0.11
 
 * Increase minimum requests value for heuristic
