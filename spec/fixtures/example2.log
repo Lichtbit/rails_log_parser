@@ -1,0 +1,91 @@
+I, [2023-03-14T10:42:12.177010 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e] Started GET "/backend/scores?page=3538" for 99.99.167.141 at 2023-03-14 10:42:12 +0100
+I, [2023-03-14T10:42:12.177999 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e] Processing by Backend::ScoresController#index as */*
+I, [2023-03-14T10:42:12.178073 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e]   Parameters: {"page"=>"3538"}
+I, [2023-03-14T10:42:12.763300 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e]   Rendered m3/app/views/application/index.html.haml within layouts/application (Duration: 580.4ms | Allocations: 480319)
+I, [2023-03-14T10:42:12.767917 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e]   Rendered layout layouts/application.html.haml (Duration: 585.1ms | Allocations: 482361)
+I, [2023-03-14T10:42:12.768164 #3456321]  INFO -- : [0b25e636-3a45-4a4e-84af-04545328222e] Completed 200 OK in 590ms (Views: 538.3ms | ActiveRecord: 47.3ms | Allocations: 484128)
+I, [2023-03-14T10:42:13.060804 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2] Started GET "/people/2414" for 99.99.167.141 at 2023-03-14 10:42:13 +0100
+I, [2023-03-14T10:42:13.063187 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2] Processing by PeopleController#show as */*
+I, [2023-03-14T10:42:13.063301 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2]   Parameters: {"id"=>"2414"}
+I, [2023-03-14T10:42:14.016344 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2]   Rendered people/show.html.haml within layouts/application (Duration: 683.2ms | Allocations: 415590)
+I, [2023-03-14T10:42:14.018821 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2]   Rendered layout layouts/application.html.haml (Duration: 685.7ms | Allocations: 417569)
+I, [2023-03-14T10:42:14.019031 #3456321]  INFO -- : [4590aaa1-3bc2-4f72-93c5-c0743f2ac6e2] Completed 200 OK in 956ms (Views: 537.4ms | ActiveRecord: 199.7ms | Allocations: 548334)
+I, [2023-03-14T10:42:14.139388 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a] Started GET "/backend/scores/28832" for 99.99.66.202 at 2023-03-14 10:42:14 +0100
+I, [2023-03-14T10:42:14.141004 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a] Processing by Backend::ScoresController#show as */*
+I, [2023-03-14T10:42:14.141112 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a]   Parameters: {"id"=>"28832"}
+I, [2023-03-14T10:42:14.166498 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a]   Rendered backend/backend/show.html.haml within layouts/application (Duration: 18.7ms | Allocations: 5019)
+I, [2023-03-14T10:42:14.169632 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a]   Rendered layout layouts/application.html.haml (Duration: 21.9ms | Allocations: 7043)
+I, [2023-03-14T10:42:14.169926 #3456321]  INFO -- : [b26e6577-b164-4b53-a1f5-5c726f607d2a] Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 3.2ms | Allocations: 8514)
+I, [2023-03-14T10:42:14.211636 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2] Started GET "/backend/group_scores?page=4822" for 99.99.167.141 at 2023-03-14 10:42:14 +0100
+I, [2023-03-14T10:42:14.212420 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2] Processing by Backend::GroupScoresController#index as */*
+I, [2023-03-14T10:42:14.212476 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2]   Parameters: {"page"=>"4822"}
+I, [2023-03-14T10:42:14.759192 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2]   Rendered m3/app/views/application/index.html.haml within layouts/application (Duration: 542.8ms | Allocations: 502128)
+I, [2023-03-14T10:42:14.762878 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2]   Rendered layout layouts/application.html.haml (Duration: 546.5ms | Allocations: 504177)
+I, [2023-03-14T10:42:14.763191 #3456321]  INFO -- : [38c53dbb-32f1-4971-b356-5758ad9744c2] Completed 200 OK in 551ms (Views: 510.7ms | ActiveRecord: 36.2ms | Allocations: 505976)
+I, [2023-03-14T10:42:15.056633 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4] Started GET "/backend/group_scores/75288" for 99.99.167.141 at 2023-03-14 10:42:15 +0100
+I, [2023-03-14T10:42:15.057853 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4] Processing by Backend::GroupScoresController#show as */*
+I, [2023-03-14T10:42:15.057953 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4]   Parameters: {"id"=>"75288"}
+I, [2023-03-14T10:42:15.085748 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4]   Rendered backend/backend/show.html.haml within layouts/application (Duration: 21.6ms | Allocations: 5566)
+I, [2023-03-14T10:42:15.090883 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4]   Rendered layout layouts/application.html.haml (Duration: 26.8ms | Allocations: 7620)
+I, [2023-03-14T10:42:15.091226 #3456321]  INFO -- : [4990a2f4-2ea7-478c-861b-4d1bfa03f5f4] Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 4.5ms | Allocations: 9193)
+I, [2023-03-14T10:42:15.187860 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90] Started GET "/backend/scores?order=team_desc&page=3099" for 99.99.167.141 at 2023-03-14 10:42:15 +0100
+I, [2023-03-14T10:42:15.189013 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90] Processing by Backend::ScoresController#index as */*
+I, [2023-03-14T10:42:15.189109 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90]   Parameters: {"order"=>"team_desc", "page"=>"3099"}
+I, [2023-03-14T10:42:15.768592 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99] Started GET "/series/rounds/44" for 99.99.144.68 at 2023-03-14 10:42:15 +0100
+I, [2023-03-14T10:42:15.769309 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99] Processing by Series::RoundsController#show as */*
+I, [2023-03-14T10:42:15.769356 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Parameters: {"id"=>"44"}
+I, [2023-03-14T10:42:15.778687 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90]   Rendered m3/app/views/application/index.html.haml within layouts/application (Duration: 583.6ms | Allocations: 480733)
+I, [2023-03-14T10:42:15.781190 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90]   Rendered layout layouts/application.html.haml (Duration: 586.2ms | Allocations: 482775)
+I, [2023-03-14T10:42:15.781460 #3456321]  INFO -- : [89e7f78e-69e1-4330-85eb-067e4622cd90] Completed 200 OK in 592ms (Views: 487.2ms | ActiveRecord: 99.5ms | Allocations: 484525)
+I, [2023-03-14T10:42:15.990206 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Rendered series/rounds/show.html.haml within layouts/application (Duration: 210.1ms | Allocations: 44735)
+I, [2023-03-14T10:42:15.990319 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Rendered layout layouts/application.html.haml (Duration: 210.2ms | Allocations: 44781)
+I, [2023-03-14T10:42:15.990619 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99] Completed 500 Internal Server Error in 221ms (ActiveRecord: 19.1ms | Allocations: 47772)
+F, [2023-03-14T10:42:15.991916 #3456322] FATAL -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column series_rounds.name does not exist
+LINE 1: ...LECT "series_rounds".* FROM "series_rounds" WHERE "series_ro...
+                                                             ^
+):
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]     1: - [:female, :male].each do |gender|
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]     2:   - assessments = Series::Round.where(name: round_name).map { |r| r.assessments.gender(gender).first }.compact
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]     3:   - people_ids = Series::PersonParticipation.joins(assessment: :round).where(series_rounds: { name: round_name}).joins(:person).merge(Person.gender(gender)).uniq.pluck(:person_id).uniq
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]     4: 
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]     5:   = toc.anker("Ewige Tabelle #{g(gender)}", :h3)
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99]   
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_endless_table.html.haml:2:in `map'
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_endless_table.html.haml:2
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_endless_table.html.haml:1:in `each'
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_endless_table.html.haml:1
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_aggregate_type_mv_hindernis_cup.html.haml:18
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/_show.html.haml:28
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/show.html.haml:9
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/helpers/ui_helper.rb:12:in `table_of_contents'
+[e0ffe6c7-d86f-4914-bb43-0311873e6d99] app/views/series/rounds/show.html.haml:1
+I, [2023-03-14T10:42:15.992733 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99] Processing by ErrorsController#internal_server_error as */*
+I, [2023-03-14T10:42:15.992781 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Parameters: {"id"=>"44"}
+I, [2023-03-14T10:42:16.006870 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Rendered errors/internal_server_error.html.haml within layouts/application (Duration: 13.3ms | Allocations: 3981)
+I, [2023-03-14T10:42:16.009198 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99]   Rendered layout layouts/application.html.haml (Duration: 15.7ms | Allocations: 5753)
+I, [2023-03-14T10:42:16.009697 #3456322]  INFO -- : [e0ffe6c7-d86f-4914-bb43-0311873e6d99] Completed 500 Internal Server Error in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 6137)
+I, [2023-03-14T10:42:16.072252 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b] Started GET "/backend/group_scores/73004" for 99.99.167.141 at 2023-03-14 10:42:16 +0100
+I, [2023-03-14T10:42:16.073542 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b] Processing by Backend::GroupScoresController#show as */*
+I, [2023-03-14T10:42:16.073644 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b]   Parameters: {"id"=>"73004"}
+I, [2023-03-14T10:42:16.100581 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b]   Rendered backend/backend/show.html.haml within layouts/application (Duration: 20.5ms | Allocations: 5563)
+I, [2023-03-14T10:42:16.105445 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b]   Rendered layout layouts/application.html.haml (Duration: 25.4ms | Allocations: 7617)
+I, [2023-03-14T10:42:16.105797 #3456321]  INFO -- : [ec7cc412-9ee6-47fa-bd14-86612acf388b] Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 4.3ms | Allocations: 9190)
+I, [2023-03-14T10:42:16.201757 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d] Started GET "/backend/group_scores/71541" for 99.99.167.141 at 2023-03-14 10:42:16 +0100
+I, [2023-03-14T10:42:16.202646 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d] Processing by Backend::GroupScoresController#show as */*
+I, [2023-03-14T10:42:16.202724 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d]   Parameters: {"id"=>"71541"}
+I, [2023-03-14T10:42:16.223422 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d]   Rendered backend/backend/show.html.haml within layouts/application (Duration: 16.3ms | Allocations: 5563)
+I, [2023-03-14T10:42:16.227464 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d]   Rendered layout layouts/application.html.haml (Duration: 20.4ms | Allocations: 7617)
+I, [2023-03-14T10:42:16.227795 #3456321]  INFO -- : [678f9f8d-0f4a-43f5-a220-9ace2ccd0e4d] Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 3.8ms | Allocations: 9183)
+I, [2023-03-14T10:42:16.324184 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527] Started GET "/backend/group_scores/67888" for 99.99.167.141 at 2023-03-14 10:42:16 +0100
+I, [2023-03-14T10:42:16.325517 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527] Processing by Backend::GroupScoresController#show as */*
+I, [2023-03-14T10:42:16.325622 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527]   Parameters: {"id"=>"67888"}
+I, [2023-03-14T10:42:16.353577 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527]   Rendered backend/backend/show.html.haml within layouts/application (Duration: 21.9ms | Allocations: 5566)
+I, [2023-03-14T10:42:16.358853 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527]   Rendered layout layouts/application.html.haml (Duration: 27.2ms | Allocations: 7620)
+I, [2023-03-14T10:42:16.359332 #3456321]  INFO -- : [51a9c146-0264-47b9-9507-4944e9f5f527] Completed 200 OK in 34ms (Views: 24.1ms | ActiveRecord: 4.6ms | Allocations: 9186)
+I, [2023-03-14T10:42:16.455091 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09] Started GET "/teams/499" for 99.99.167.141 at 2023-03-14 10:42:16 +0100
+I, [2023-03-14T10:42:16.455734 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09] Processing by TeamsController#show as */*
+I, [2023-03-14T10:42:16.455777 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09]   Parameters: {"id"=>"499"}
+I, [2023-03-14T10:42:18.072725 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09]   Rendered teams/show.html.haml within layouts/application (Duration: 710.2ms | Allocations: 346829)
+I, [2023-03-14T10:42:18.075296 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09]   Rendered layout layouts/application.html.haml (Duration: 712.8ms | Allocations: 348873)
+I, [2023-03-14T10:42:18.075550 #3456321]  INFO -- : [a9e4b7fc-3b15-456c-a310-0fc53620de09] Completed 200 OK in 1620ms (Views: 645.9ms | ActiveRecord: 203.2ms | Allocations: 715656)

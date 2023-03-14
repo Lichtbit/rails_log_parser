@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'rails_log_parser'
-  spec.version       = '0.0.12'
+  spec.version       = '0.0.13'
   spec.authors       = ['Georg Limbach']
   spec.email         = ['georg.limbach@lichtbit.com']
 

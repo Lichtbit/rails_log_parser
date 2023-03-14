@@ -79,10 +79,16 @@ class RailsLogParser::Parser
     @actions[params['id']] ||= RailsLogParser::Action.new(type, params['id'])
     @actions[params['id']].severity = params['severity_label']
     @actions[params['id']].datetime = params['datetime']
-    @actions[params['id']].add_message(params['message'])
+    @actions[params['id']].add_message(params['message']) unless params['message'].nil?
   end
 
   def request(params)
+    action(:request, params)
+  end
+
+  def empty_line(params)
+    params = params.named_captures
+    params['message'] = nil
     action(:request, params)
   end
 

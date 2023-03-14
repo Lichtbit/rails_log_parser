@@ -20,7 +20,10 @@ class RailsLogParser::Line
       (?<severity_label>[A-Z]+)\s+--\s+[^:]*:\s+    # INFO -- :
       \[(?<id>[a-f0-9\-]{36})\]\s*                  # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
       \z/x)
-    return if match
+    if match
+      parser.empty_line(match)
+      return
+    end
 
     # normal log line
     match = line.match(/

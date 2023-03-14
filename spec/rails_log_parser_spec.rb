@@ -111,4 +111,23 @@ RSpec.describe RailsLogParser do
       end
     end
   end
+
+  context 'with empty lines' do
+    let(:file_path) { File.join(__dir__, 'fixtures/example2.log') }
+
+    describe '.from_file' do
+      it 'parses file' do
+        expect(parser.actions.count).to eq 11
+        expect(parser.actions.count(&:fatal?)).to eq 1
+        expect(parser.actions.count(&:info?)).to eq 10
+        expect(parser.actions.count(&:warn?)).to eq 0
+        expect(parser.actions.count(&:without_request?)).to eq 0
+        expect(parser.not_parseable_lines.lines.count).to eq 0
+        expect(parser.actions.select(&:fatal?).map(&:headline)).to eq [
+          'ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column series_rounds.name does not exist'
+        ]
+        expect(parser.actions.select(&:known_exception?).map(&:headline)).to eq []
+      end
+    end
+  end
 end
