@@ -91,7 +91,7 @@ class RailsLogParser::Line
     end
 
     match = line.match(/
-      \A\[(?<id>[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12})\]\s # [UUID]
+      \A\[(?<id>[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12})\]\s? # [UUID]
       (?<message>.*)
       \z/x)
     if match

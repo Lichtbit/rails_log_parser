@@ -49,6 +49,10 @@ print parser.summary(last_minutes: 22)          # print summary for the last 22 
 
 ## Changelog
 
+### 0.0.14
+
+* Better empty lines handling
+
 ### 0.0.13
 
 * Better empty lines handling
