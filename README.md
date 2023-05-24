@@ -47,7 +47,24 @@ parser.enable_heuristic(File.dirname(log_path)) # path to save heuristic stats
 print parser.summary(last_minutes: 22)          # print summary for the last 22 minutes
 ```
 
+You can configure filters:
+
+```ruby
+# config/rails_log_parser.rb
+
+RailsLogParser.configure do |parser|
+  parser.ignore_lines = [
+    /Error performing MailerConfigurationJob .+ Net::ReadTimeout/,
+  ]
+end
+```
+
+
 ## Changelog
+
+### 0.0.15
+
+* Filter lines by config file
 
 ### 0.0.14
 

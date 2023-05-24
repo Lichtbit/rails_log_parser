@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'rails_log_parser'
-  spec.version       = '0.0.14'
+  spec.version       = '0.0.15'
   spec.authors       = ['Georg Limbach']
   spec.email         = ['georg.limbach@lichtbit.com']
 
@@ -24,5 +24,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'enumerize', '~> 2.4'
   spec.add_dependency 'json', '>= 2.0'
+  spec.add_dependency 'rails', '>= 2.1'
   spec.add_development_dependency 'rspec', '>= 3.0'
 end

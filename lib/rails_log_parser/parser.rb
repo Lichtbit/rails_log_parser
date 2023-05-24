@@ -22,6 +22,9 @@ class RailsLogParser::Parser
   attr_reader :not_parseable_lines
 
   def initialize
+    config_file = File.join(Dir.pwd,'config/rails_log_parser.rb')
+    require config_file if File.file?(config_file)
+
     @actions = {}
     @not_parseable_lines = RailsLogParser::NotParseableLines.new
     @heuristic = nil
@@ -47,7 +50,7 @@ class RailsLogParser::Parser
     end
 
     %i[warn error fatal].each do |severity|
-      selected = relevant.select { |a| a.public_send("#{severity}?") }.reject(&:known_exception?)
+      selected = relevant.select { |a| a.public_send("#{severity}?") }.reject(&:known_exception?).reject(&:ignore?)
       next if selected.blank?
 
       summary_output.push("#{selected.count} lines with #{severity}:")

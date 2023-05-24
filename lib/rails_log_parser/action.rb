@@ -45,6 +45,12 @@ class RailsLogParser::Action
     end
   end
 
+  def ignore?
+    @messages.any? do |message|
+      RailsLogParser.ignore_lines.any? {|ignore| message.match?(ignore) }
+    end
+  end
+
   def headline
     @headline.presence || @messages.first
   end

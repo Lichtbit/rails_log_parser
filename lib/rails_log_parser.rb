@@ -1,10 +1,17 @@
 # frozen_string_literal: true
 
 require 'enumerize'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module RailsLogParser
   THRESHOLD_HEURISTIC = 0.02
   MIN_ACTIONS_HEURISTIC = 100000 # sum of last 10 days
+
+  mattr_accessor :ignore_lines, default: []
+
+  def self.configure
+    yield self
+  end
 end
 
 require_relative 'rails_log_parser/parser'
