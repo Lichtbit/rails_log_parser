@@ -5,7 +5,7 @@ class RailsLogParser::Parser
     attr_writer :log_path
 
     def log_path
-      @log_path || ENV['LOG_PATH']
+      @log_path || ENV['LOG_PATH'] || raise('no log_path given')
     end
 
     def from_file(path)
@@ -19,7 +19,7 @@ class RailsLogParser::Parser
     end
   end
 
-  attr_reader :not_parseable_lines
+  attr_reader :not_parseable_lines, :last_action
 
   def initialize
     config_file = File.join(Dir.pwd,'config/rails_log_parser.rb')
@@ -69,6 +69,7 @@ class RailsLogParser::Parser
     @actions[params['id']].severity = params['severity_label']
     @actions[params['id']].datetime = params['datetime']
     @actions[params['id']].add_message(params['message']) unless params['message'].nil?
+    @last_action = @actions[params['id']]
   end
 
   def request(params)
@@ -98,9 +99,5 @@ class RailsLogParser::Parser
   def add_message(params)
     @actions[params['id']] ||= RailsLogParser::Action.new(type, params['id'])
     @actions[params['id']].add_message(params['message'])
-  end
-
-  def last_action
-    RailsLogParser::Action.last
   end
 end

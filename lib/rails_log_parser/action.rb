@@ -4,10 +4,6 @@ require 'time'
 require 'securerandom'
 
 class RailsLogParser::Action
-  class << self
-    attr_accessor :last
-  end
-
   SEVERITIES = %i[debug info warn error fatal].freeze
   KNOWN_EXCEPTIONS = {
     "Can't verify CSRF token authenticity." => :warn,
@@ -28,7 +24,6 @@ class RailsLogParser::Action
     @id = id
     @messages = []
     @stacktrace = []
-    self.class.last = self
   end
 
   def severity=(value)

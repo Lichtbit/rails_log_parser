@@ -63,6 +63,7 @@ end
 ### unreleased
 
 * Remove heuristic
+* Fix last action handling
 
 ### 0.0.15
 
