@@ -60,7 +60,7 @@ end
 
 ## Changelog
 
-### unreleased
+### 0.0.16
 
 * Remove heuristic
 * Fix last action handling
