@@ -31,7 +31,6 @@ Call the rake tasks in cronjobs:
 ```
 LOG_PATH=/srv/rails/log/production.log
 0,20,40 * * * * rake rails_log_parser:parse[22]'      # summary of the last 22 minutes
-59     23 * * * rake rails_log_parser:parse[22,true]' # summary of the last 22 minutes and save and analyse heuristic
 ```
 
 Or use it in your code:
@@ -43,7 +42,6 @@ puts parser.actions.select(&:fatal?).map(&:headline)
 
 ```ruby
 parser = RailsLogParser::Parser.from_file(log_path)
-parser.enable_heuristic(File.dirname(log_path)) # path to save heuristic stats
 print parser.summary(last_minutes: 22)          # print summary for the last 22 minutes
 ```
 
@@ -61,6 +59,10 @@ end
 
 
 ## Changelog
+
+### unreleased
+
+* Remove heuristic
 
 ### 0.0.15
 

@@ -27,13 +27,8 @@ class RailsLogParser::Parser
 
     @actions = {}
     @not_parseable_lines = RailsLogParser::NotParseableLines.new
-    @heuristic = nil
   end
 
-  def enable_heuristic(path)
-    @heuristic = path
-    @heuristic_today = RailsLogParser::HeuristicStatFile.new(@heuristic, Date.today).tap { |p| p.write_stats(actions) }
-  end
 
   def summary(last_minutes: nil)
     relevant = actions
@@ -56,15 +51,6 @@ class RailsLogParser::Parser
       summary_output.push("#{selected.count} lines with #{severity}:")
       summary_output += selected.map(&:headline).map { |line| "  #{line}" }
       summary_output.push("\n\n")
-    end
-
-    unless @heuristic.nil?
-      stats = RailsLogParser::HeuristicStatFile.build_heuristic(@heuristic, @heuristic_today)
-      if stats.present?
-        summary_output.push("Heuristic match! (threshold: #{RailsLogParser::HeuristicStatFile.heuristic_threshold})")
-        stats.each { |k, v| summary_output.push("- #{k}: #{v.round(4)}") }
-        summary_output.push("\n\n")
-      end
     end
 
     summary_output.join("\n")
