@@ -12,6 +12,7 @@ class RailsLogParser::Action
     'ActionController::UnfilteredParameters' => :fatal,
     'ActionController::UnknownFormat' => :fatal,
     'ActiveRecord::RecordNotFound' => :fatal,
+    'ActionDispatch::Http::MimeNegotiation::InvalidType' => :fatal,
   }.freeze
 
   extend Enumerize
