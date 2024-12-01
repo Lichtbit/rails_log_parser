@@ -60,6 +60,10 @@ end
 
 ## Changelog
 
+### 0.0.18
+
+* Known exceptions given with maximum severity
+
 ### 0.0.17
 
 * Adding `ActionDispatch::Http::MimeNegotiation::InvalidType` as known exceptions

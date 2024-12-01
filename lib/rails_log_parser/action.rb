@@ -36,8 +36,9 @@ class RailsLogParser::Action
   end
 
   def known_exception?(key = nil)
+    severity_index = SEVERITIES.index(severity.to_sym)
     @messages.any? do |message|
-      KNOWN_EXCEPTIONS.any? { |e, s| message.include?(e) && severity == s && (key.nil? || key == e) }
+      KNOWN_EXCEPTIONS.any? { |e, s| message.include?(e) && severity_index <= SEVERITIES.index(s) && (key.nil? || key == e) }
     end
   end
 
