@@ -99,7 +99,7 @@ class RailsLogParser::Line
       return
     end
 
-    if parser.last_action&.error? || parser.last_action&.fatal?
+    if parser.last_action&.error? || parser.last_action&.fatal? || parser.last_action&.active_job?
       parser.last_action.add_stacktrace(line)
       return
     end

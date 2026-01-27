@@ -60,6 +60,10 @@ end
 
 ## Changelog
 
+### 0.0.19
+
+* Ignore lines after ActiveJob lines
+
 ### 0.0.18
 
 * Known exceptions given with maximum severity
