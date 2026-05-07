@@ -45,6 +45,11 @@ parser = RailsLogParser::Parser.from_file(log_path)
 print parser.summary(last_minutes: 22)          # print summary for the last 22 minutes
 ```
 
+```ruby
+parser = RailsLogParser::Parser.from_journalctl(unit: "myapp.service", since: "1 hour ago")
+print parser.summary(last_minutes: 22)          # print summary for the last 22 minutes
+```
+
 You can configure filters:
 
 ```ruby
@@ -59,6 +64,10 @@ end
 
 
 ## Changelog
+
+### 0.0.20
+
+* Add support for journald
 
 ### 0.0.19
 

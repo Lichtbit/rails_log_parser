@@ -8,14 +8,30 @@ class RailsLogParser::Parser
       @log_path || ENV['LOG_PATH'] || raise('no log_path given')
     end
 
-    def from_file(path)
+    def from_io(io)
       parser = new
-      File.open(path, 'r') do |handle|
-        while (line = handle.gets)
-          parser.puts(line)
-        end
+
+      io.each_line do |line|
+        parser.puts(line)
       end
+
       parser
+    end
+
+    def from_file(path)
+      File.open(path, 'r') do |file|
+        from_io(file)
+      end
+    end
+
+    def from_journalctl(unit:, since: nil)
+      cmd = ["journalctl", "-u", unit, "-o", "cat"]
+
+      cmd += ["--since", since] if since
+
+      IO.popen(cmd, err: [:child, :out]) do |io|
+        from_io(io)
+      end
     end
   end
 
