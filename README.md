@@ -65,6 +65,10 @@ end
 
 ## Changelog
 
+### 0.0.21
+
+* Use `ignore_lines` on not parsable lines
+
 ### 0.0.20
 
 * Add support for journald

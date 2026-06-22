@@ -12,7 +12,7 @@ class RailsLogParser::NotParseableLines
   end
 
   def push(line)
-    @lines.push(line) unless today_lines.include?(line)
+    @lines.push(line) unless ignore?(line)
   end
 
   def save
@@ -29,6 +29,12 @@ class RailsLogParser::NotParseableLines
 
   def today_lines
     @stats[Date.today.to_s] || []
+  end
+
+  def ignore?(line)
+    return true if today_lines.include?(line)
+
+    RailsLogParser.ignore_lines.any? {|ignore| line.match?(ignore) }
   end
 
   def load_file
