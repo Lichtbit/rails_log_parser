@@ -61,7 +61,7 @@ RSpec.describe RailsLogParser do
         expect(parser.actions.count(&:without_request?)).to eq 0
         expect(parser.not_parseable_lines.lines.count).to eq 0
         expect(parser.actions.select(&:fatal?).map(&:headline)).to eq [
-          'ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column series_rounds.name does not exist'
+          'ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column series_rounds.name does not exist',
         ]
         expect(parser.actions.select(&:known_exception?).map(&:headline)).to eq []
       end

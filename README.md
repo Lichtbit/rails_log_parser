@@ -2,6 +2,11 @@
 
 This gem helps you to quick analyse your server logs without external monitor servers. Simple applications with a low number of requests cause only a low number of errors. So you can call a cronjob to analyse your logs periodly. If the summary is not empty your server will email you the result automaticly.
 
+## Requirements
+
+* Ruby 3.2 or newer
+* ActiveSupport 7.0 or newer
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -30,7 +35,7 @@ Call the rake tasks in cronjobs:
 
 ```
 LOG_PATH=/srv/rails/log/production.log
-0,20,40 * * * * rake rails_log_parser:parse[22]'      # summary of the last 22 minutes
+0,20,40 * * * * rake rails_log_parser:parse[22]      # summary of the last 22 minutes
 ```
 
 Or use it in your code:
@@ -65,89 +70,7 @@ end
 
 ## Changelog
 
-### 0.0.21
-
-* Use `ignore_lines` on not parsable lines
-
-### 0.0.20
-
-* Add support for journald
-
-### 0.0.19
-
-* Ignore lines after ActiveJob lines
-
-### 0.0.18
-
-* Known exceptions given with maximum severity
-
-### 0.0.17
-
-* Adding `ActionDispatch::Http::MimeNegotiation::InvalidType` as known exceptions
-* Update dependencies
-
-### 0.0.16
-
-* Remove heuristic
-* Fix last action handling
-
-### 0.0.15
-
-* Filter lines by config file
-
-### 0.0.14
-
-* Better empty lines handling
-
-### 0.0.13
-
-* Better empty lines handling
-
-### 0.0.12
-
-* Adding `ActionController::UnknownFormat` as known exceptions
-
-### 0.0.11
-
-* Increase minimum requests value for heuristic
-
-### 0.0.10
-
-* Ignore periods with too few requests
-
-### 0.0.9
-
-* Message not parseable lines only once a day
-* Delete old heuristic stat files automaticly
-
-### 0.0.8
-
-* Adding `ActionController::UnfilteredParameters` as known exceptions
-* Adjust heuristic rate for better matching
-
-### 0.0.7
-
-* Remove empty lines on summary without report
-
-### 0.0.6
-
-* Adding heuristic to rate known exceptions
-
-### 0.0.5
-
-* Removing `URI::InvalidURIError` as known exceptions
-
-### 0.0.4
-
-* Handle stacktrace of fatals too
-
-### 0.0.3
-
-* Adding `URI::InvalidURIError` as known exceptions
-
-### 0.0.2
-
-* Adding `ActionController::InvalidAuthenticityToken` as known exceptions
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## Contributing
 

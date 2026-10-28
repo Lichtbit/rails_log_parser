@@ -18,7 +18,7 @@ class RailsLogParser::Line
       \A(?<severity_id>[DIWEFU]),\s                 # I,
       \[(?<datetime>[^\]]+)\s\#(?<pid>\d+)\]\s+     # [2021-11-26T13:11:01.255168 #10158]
       (?<severity_label>[A-Z]+)\s+--\s+[^:]*:\s+    # INFO -- :
-      \[(?<id>[a-f0-9\-]{36})\]\s*                  # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
+      \[(?<id>[a-f0-9-]{36})\]\s*                   # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
       \z/x)
     if match
       parser.empty_line(match)
@@ -30,7 +30,7 @@ class RailsLogParser::Line
       \A(?<severity_id>[DIWEFU]),\s                 # I,
       \[(?<datetime>[^\]]+)\s\#(?<pid>\d+)\]\s+     # [2021-11-26T13:11:01.255168 #10158]
       (?<severity_label>[A-Z]+)\s+--\s+[^:]*:\s+    # INFO -- :
-      \[(?<id>[a-f0-9\-]{36})\]\s                   # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
+      \[(?<id>[a-f0-9-]{36})\]\s                    # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
       (?<message>.*)                                # Processing by Public::Controller
       \z/x)
     if match
@@ -73,7 +73,7 @@ class RailsLogParser::Line
       (?<severity_label>[A-Z]+)\s+--\s+[^:]*:\s     # INFO -- :
       (?<datetime2>[^\s]+)\s                        # 2021-11-26T13:51:30+0000:
       \[Worker[^\]]+\]\s                            # [Worker(delayed_job host:production pid:10411)]
-      (?:\d+\sjobs\sprocessed)|(?:Starting\sjob)    # 19 jobs processed
+      (?:\d+\sjobs\sprocessed|Starting\sjob)        # 19 jobs processed
       (?:.*)                                        # at 2.8816
       \z/x)
     return if match

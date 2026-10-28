@@ -18,7 +18,7 @@ class RailsLogParser::NotParseableLines
   def save
     @stats[Date.today.to_s] = today_lines + lines
 
-    last_7_days = (0..6).map { |i| (Date.today - i) }.map(&:to_s)
+    last_7_days = (0..6).map { |i| Date.today - i }.map(&:to_s)
     @stats.each_key do |key|
       @stats.delete(key) unless last_7_days.include?(key)
     end
@@ -34,7 +34,7 @@ class RailsLogParser::NotParseableLines
   def ignore?(line)
     return true if today_lines.include?(line)
 
-    RailsLogParser.ignore_lines.any? {|ignore| line.match?(ignore) }
+    RailsLogParser.ignore_lines.any? { |ignore| line.match?(ignore) }
   end
 
   def load_file

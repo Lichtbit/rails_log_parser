@@ -25,11 +25,11 @@ class RailsLogParser::Parser
     end
 
     def from_journalctl(unit:, since: nil)
-      cmd = ["journalctl", "-u", unit, "-o", "cat"]
+      cmd = ['journalctl', '-u', unit, '-o', 'cat']
 
-      cmd += ["--since", since] if since
+      cmd += ['--since', since] if since
 
-      IO.popen(cmd, err: [:child, :out]) do |io|
+      IO.popen(cmd, err: %i[child out]) do |io|
         from_io(io)
       end
     end
@@ -38,13 +38,12 @@ class RailsLogParser::Parser
   attr_reader :not_parseable_lines, :last_action
 
   def initialize
-    config_file = File.join(Dir.pwd,'config/rails_log_parser.rb')
+    config_file = File.join(Dir.pwd, 'config/rails_log_parser.rb')
     require config_file if File.file?(config_file)
 
     @actions = {}
     @not_parseable_lines = RailsLogParser::NotParseableLines.new
   end
-
 
   def summary(last_minutes: nil)
     relevant = actions
@@ -113,7 +112,9 @@ class RailsLogParser::Parser
   end
 
   def add_message(params)
-    @actions[params['id']] ||= RailsLogParser::Action.new(type, params['id'])
+    # continuation of a request which started before the beginning of the log
+    return if @actions[params['id']].nil?
+
     @actions[params['id']].add_message(params['message'])
   end
 end

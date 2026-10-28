@@ -15,13 +15,22 @@ class RailsLogParser::Action
     'ActionDispatch::Http::MimeNegotiation::InvalidType' => :fatal,
   }.freeze
 
-  extend Enumerize
-  enumerize :severity, in: SEVERITIES, predicates: true
-  enumerize :type, in: %i[request without_request delayed_job active_job], predicates: true
-  attr_reader :datetime
+  TYPES = %i[request without_request delayed_job active_job].freeze
+
+  attr_reader :type, :severity, :datetime
+
+  SEVERITIES.each do |value|
+    define_method(:"#{value}?") { severity == value }
+  end
+
+  TYPES.each do |value|
+    define_method(:"#{value}?") { type == value }
+  end
 
   def initialize(type, id)
-    self.type = type
+    raise ArgumentError, "unknown type #{type.inspect}" unless TYPES.include?(type)
+
+    @type = type
     @id = id
     @messages = []
     @stacktrace = []
@@ -29,22 +38,26 @@ class RailsLogParser::Action
 
   def severity=(value)
     value = value.downcase.to_sym
-    return unless severity.nil? || SEVERITIES.index(severity.to_sym) < SEVERITIES.index(value)
+    # Logger::UNKNOWN is written with the label ANY, it carries no severity we can rate
+    return unless SEVERITIES.include?(value)
+    return unless severity.nil? || SEVERITIES.index(severity) < SEVERITIES.index(value)
 
-    super(value)
+    @severity = value
     @headline = nil
   end
 
   def known_exception?(key = nil)
-    severity_index = SEVERITIES.index(severity.to_sym)
+    severity_index = SEVERITIES.index(severity)
     @messages.any? do |message|
-      KNOWN_EXCEPTIONS.any? { |e, s| message.include?(e) && severity_index <= SEVERITIES.index(s) && (key.nil? || key == e) }
+      KNOWN_EXCEPTIONS.any? do |e, s|
+        message.include?(e) && severity_index <= SEVERITIES.index(s) && (key.nil? || key == e)
+      end
     end
   end
 
   def ignore?
     @messages.any? do |message|
-      RailsLogParser.ignore_lines.any? {|ignore| message.match?(ignore) }
+      RailsLogParser.ignore_lines.any? { |ignore| message.match?(ignore) }
     end
   end
 
@@ -57,7 +70,7 @@ class RailsLogParser::Action
   end
 
   def after?(datetime)
-    @datetime > datetime
+    @datetime.present? && @datetime > datetime
   end
 
   def add_message(value)
