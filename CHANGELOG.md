@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.1
 
 * Use the exception as headline of errors instead of an empty line, also with further log tags
   (`config.log_tags = %i[uuid domain]`)
