@@ -13,12 +13,13 @@ class RailsLogParser::Line
   def parse
     return if line.empty?
 
-    # empty log line
+    # empty log line, optionally with further log tags (config.log_tags = %i[uuid domain])
     match = line.match(/
       \A(?<severity_id>[DIWEFU]),\s                 # I,
       \[(?<datetime>[^\]]+)\s\#(?<pid>\d+)\]\s+     # [2021-11-26T13:11:01.255168 #10158]
       (?<severity_label>[A-Z]+)\s+--\s+[^:]*:\s+    # INFO -- :
-      \[(?<id>[a-f0-9-]{36})\]\s*                   # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
+      \[(?<id>[a-f0-9-]{36})\]                      # [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]
+      (?:\s+\[[^\]]*\])*\s*                         # [example.com]
       \z/x)
     if match
       parser.empty_line(match)

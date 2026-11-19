@@ -114,6 +114,8 @@ class RailsLogParser::Parser
   def add_message(params)
     # continuation of a request which started before the beginning of the log
     return if @actions[params['id']].nil?
+    # empty continuation line, optionally with further log tags (config.log_tags = %i[uuid domain])
+    return if params['message'].match?(/\A(?:\[[^\]]*\]\s*)*\z/)
 
     @actions[params['id']].add_message(params['message'])
   end

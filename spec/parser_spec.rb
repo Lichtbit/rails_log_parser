@@ -19,6 +19,32 @@ RSpec.describe RailsLogParser::Parser do
     end
   end
 
+  [nil, '[example.com]', '[example.com] [1.2.3.4]'].each do |tags|
+    context "with an exception and log tags #{tags.inspect}" do
+      let(:prefix) { ['[b42b65ab-7985-4bc2-a5b5-1fb23e6ad940]', tags].compact.join(' ') }
+      let(:lines) do
+        [
+          "I, [#{datetime} #1]  INFO -- : #{prefix} Started GET \"/\" for 1.2.3.4 at 2026-11-17 23:38:36 +0000",
+          "I, [#{datetime} #1]  INFO -- : #{prefix} Processing by StaticPagesController#home as JSON",
+          "I, [#{datetime} #1]  INFO -- : #{prefix} Completed 500 Internal Server Error in 1ms",
+          "F, [#{datetime} #1] FATAL -- : #{prefix}   ",
+          "#{prefix}   ",
+          "#{prefix} ActionView::MissingTemplate (Missing template static_pages/home):",
+          "#{prefix}   ",
+          "#{prefix} app/controllers/static_pages_controller.rb:7:in 'StaticPagesController#home'",
+        ]
+      end
+
+      it 'uses the exception as headline' do
+        expect(parser.actions.map(&:headline)).to eq(
+          ["#{tags} ActionView::MissingTemplate (Missing template static_pages/home):".strip],
+        )
+        expect(parser.actions.map(&:severity)).to eq [:fatal]
+        expect(parser.not_parseable_lines.lines).to eq []
+      end
+    end
+  end
+
   context 'with a message using the label ANY' do
     let(:lines) { ["U, [#{datetime} #1]   ANY -- : [b42b65ab-7985-4bc2-a5b5-1fb23e6ad940] something"] }
 

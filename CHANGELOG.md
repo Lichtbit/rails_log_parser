@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+* Use the exception as headline of errors instead of an empty line, also with further log tags
+  (`config.log_tags = %i[uuid domain]`)
+
 ## 0.1.0
 
 * Drop `enumerize`, `json` and `rails` dependencies, only `activesupport` is required
